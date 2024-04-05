@@ -1,13 +1,66 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  font-family: "Fredoka";
+  font-weight: 300;
+  color: whitesmoke;
+  background-color: #22262b;
+}
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+.array-bar {
+  width: 2px;
+  background-color: whitesmoke;
+  display: inline-block;
+  margin: 0 1px;
+  border-radius: 1px;
+}
+
+.arrContainer {
+  /*position: absolute;
+  right: 0px;*/
+
+  margin: 0;
+  position: relative;
+  transform: rotate(180deg);
+  /* margin-top: 100px; */
+  border-bottom: 2px solid crimson;
+  border-radius: 1px;
+  
+}
+
+.content {
+  max-width: 800px;
+  margin: 30px auto; /* The auto is what makes the content centered */
+  padding: 20px;
+}
+
+.alg-buttons button{
+  margin: 15px;
+  margin-right: 10px;
+  margin-left: 0;
+  color: crimson;
+  background-color: whitesmoke;
+  border-color: transparent;
+  border-radius: 6px;
+
+}
+
+.alg-buttons button:hover {
+  background-color: crimson;
+  color: whitesmoke;
 }

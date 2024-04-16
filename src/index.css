@@ -53,14 +53,15 @@
   margin: 15px;
   margin-right: 10px;
   margin-left: 0;
-  color: crimson;
-  background-color: whitesmoke;
+  color: whitesmoke;
+  background-color: crimson;
   border-color: transparent;
   border-radius: 6px;
 
 }
 
 .alg-buttons button:hover {
-  background-color: crimson;
-  color: whitesmoke;
+  background-color: whitesmoke;
+  color: crimson;
+  transform: scale(.9);
 }

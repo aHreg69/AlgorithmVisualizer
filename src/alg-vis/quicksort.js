@@ -1,78 +1,57 @@
-// const quickSort = (arr) => {
+import {randomIntFromInterval} from './visualizer';
 
-//     const leftSwaps = [];
-//     const rightSwaps = [];
-
-//     if (arr.length <= 1){
-//         return arr;
-//     }
-    
-//     let pivot = arr[0];
-//     let leftArr = [];
-//     let rightArr = [];
-
-//     for (let i = 1; i < arr.length; i++) {
-//         if (arr[i] < pivot) {
-//           leftArr.push(arr[i]);
-//           // leftSwaps.push(arr[i]); // This and the one below probably wont work but I am trying
-//         } else {
-//           rightArr.push(arr[i]);
-//           // rightSwaps.push(arr[i]); // I dont know if this will work
-//         }
-//       }
-
-//     const swapsArr = [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
-    
-//     return swapsArr;
-//     // if this doesn't work, then take the contents of swapsArr and put that as the return. I am testing to see if this method of recording the swaps works.
-//     // hopefully I can work out this with the animates stuff, because we aren't really changing the main array
-
-// };
-
-export async function newQuickSort(arr, start, end) {
-    if (start >= end){
-        
-        return arr;
-    } else {
-        let index = await partition(arr, start, end);
-        await newQuickSort(arr, start, index-1);
-        await newQuickSort(arr, index+1, end);
-        console.log(arr);
+export function getQuickSortAnimations(array) {
+    let animations = [];
+    let helperArray = array.slice();
+    doQuickSort(helperArray, 0, helperArray.length - 1, animations);
+    array = helperArray;
+    return animations;
+  }
+  
+  function doQuickSort(helperArray, startIdx, endIdx, animations) {
+    let pivotIdx;
+    if (startIdx === endIdx) return;
+    if (startIdx < endIdx) {
+      pivotIdx = partitionArray(helperArray, startIdx, endIdx, animations);
+      doQuickSort(helperArray, startIdx, pivotIdx - 1, animations);
+      doQuickSort(helperArray, pivotIdx + 1, endIdx, animations);
     }
-}
-
-async function partition(arr, start, end) {
-    let pivotIndex = start;
-    let pivotValue = arr[end];
-    for (let i = start; i<end; i++){
-        if (arr[i] < pivotValue){
-            await swap(arr, i, pivotIndex);
-            pivotIndex++;
-        }
+  }
+  
+  function partitionArray(helperArray, startIdx, endIdx, animations) {
+    let pivotIdx = randomIntFromInterval(startIdx, endIdx); // get a random index in array for pivot
+  
+    animations.push(["comparison1", pivotIdx, endIdx]);
+    animations.push(["swap", pivotIdx, helperArray[endIdx]]);
+    animations.push(["swap", endIdx, helperArray[pivotIdx]]);
+    animations.push(["comparison2", pivotIdx, endIdx]);
+    swapEleInArray(helperArray, pivotIdx, endIdx);
+  
+    let lti = startIdx;
+  
+    for (let i = startIdx; i < endIdx; ++i) {
+      animations.push(["comparison1", i, endIdx]);
+      animations.push(["comparison2", i, endIdx]);
+      if (helperArray[i] <= helperArray[endIdx]) {
+        animations.push(["comparison1", i, lti]);
+        animations.push(["swap", i, helperArray[lti]]);
+        animations.push(["swap", lti, helperArray[i]]);
+        animations.push(["comparison2", i, lti]);
+        swapEleInArray(helperArray, i, lti);
+        lti++;
+      }
     }
-    await swap(arr, pivotIndex, end);
-    return pivotIndex;
-}
-
-async function swap(arr, a, b){
-    await sleep(10);
-    let temp = arr[a];
-    arr[a] = arr[b];
-    arr[b] = temp;
-}
-
-async function sleep(ms){
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-
-
-
-// const animateQuickSort = (arr) => {
-//     if(arr.length === 0){
-//         return arr;
-//     }
-//     const [i,j] = arr.shift();
-// }
-
-// export default animateQuickSort; newQuickSort; // i got rid of quickSort because I commented it out
+    animations.push(["comparison1", lti, endIdx]);
+    animations.push(["swap", endIdx, helperArray[lti]]);
+    animations.push(["swap", lti, helperArray[endIdx]]);
+    animations.push(["comparison2", lti, endIdx]);
+  
+    swapEleInArray(helperArray, lti, endIdx);
+    return lti;
+  }
+  
+  function swapEleInArray(helperArray, firstIdx, secondIdx) {
+    let temp = helperArray[firstIdx];
+    helperArray[firstIdx] = helperArray[secondIdx];
+    helperArray[secondIdx] = temp;
+  }

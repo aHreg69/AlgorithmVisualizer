@@ -37,8 +37,8 @@ const BubbleSortLearning = () => {
                     {/* <img src={bigO} alt='big o'/> */}
                 </div>
                 <div className='images'>
-                    <img src={bigO} alt='Bubble Sort Big O Notation'/>
                     <img src={bubbleImage} alt='Bubble Sort Visualization'/>
+                    <img src={bigO} alt='Bubble Sort Big O Notation'/>
                 </div>
             </div>
 

@@ -34,7 +34,7 @@ body {
   align-items:baseline;
   width:900px;
   margin: 0 auto;
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 2px solid rgba(245, 245, 245, 0.653);
 }
 
 .navbar h1 {

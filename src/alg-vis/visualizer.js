@@ -2,12 +2,17 @@ import React from 'react';
 
 
 //import algorithms
-import {getBubbleSortAnimations} from './bubblesort';
-import {getQuickSortAnimations} from './quicksort';
+import {getBubbleSortAnimations} from '../algorithms/bubblesort';
+import {getQuickSortAnimations} from '../algorithms/quicksort';
+
+//setting info
+// import {setInfo} from '../alg-content/quicksortLearning';
 
 //variables
 let animSpeed = 1;
 let arraySize = 200;
+
+
 
 
 export default class ArrayContainer extends React.Component {
@@ -43,10 +48,12 @@ export default class ArrayContainer extends React.Component {
         return (
             <div className="container">
 
-                <div className="alg-buttons">
-                    <button onClick={() => this.initArray()}>Reset</button>
-                    <button onClick={() => this.bubbleSort()}>Bubble Sort</button>
-                    <button onClick={() => this.quickSort()}>Quick Sort</button>
+                <div className="buttons">
+                    <button className='resetButton' onClick={() => this.initArray()}>Reset</button>
+                    <div className='algButtons'>
+                        <button onClick={() => this.bubbleSort()}>Bubble Sort</button>
+                        <button onClick={() => this.quickSort()}>Quick Sort</button>
+                    </div>
                 </div>
 
                 <div className="arrContainer">
@@ -67,6 +74,7 @@ export default class ArrayContainer extends React.Component {
     }
 
     bubbleSort() {
+        // setInfo(1);
         // Handles displaying bubble sort animations
         const animations = getBubbleSortAnimations(this.state.visArray);
         for (let i = 0; i < animations.length; i++) {
@@ -100,6 +108,7 @@ export default class ArrayContainer extends React.Component {
       }
 
       quickSort() {
+        // setInfo(2);
         // Handles displaying quick sort animations
         const animations = getQuickSortAnimations(this.state.visArray);
         for (let i = 0; i < animations.length; i++) {

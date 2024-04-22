@@ -1,4 +1,4 @@
-import {randomIntFromInterval} from './visualizer';
+import {randomIntFromInterval} from '../alg-vis/visualizer';
 
 export function getQuickSortAnimations(array) {
     let animations = [];

@@ -1,0 +1,91 @@
+.container {
+    max-width: 800px;
+    margin-bottom: 10px;
+    padding: 15px;
+    padding-top: 0px;
+    border-radius: 12px;
+    background-image: linear-gradient(to top, transparent, #41464c9b);
+    border-bottom: 2px solid rgba(245, 245, 245, 0.653);
+    margin: auto;
+  }
+  
+  .array-bar {
+    width: 2px;
+    background-color: whitesmoke;
+    display: inline-block;
+    margin: 0 1px;
+    border-radius: 1px;
+    margin-top: 10px;
+  }
+  
+  .arrContainer {
+    /*position: absolute;
+    right: 0px;*/
+  
+    margin: 0;
+    position: relative;
+    transform: rotate(180deg);
+    /* margin-top: 100px; */
+    border-bottom: 2px solid crimson;
+    border-radius: 1px;
+    background-color: transparent;
+    
+  }
+  
+  .content {
+    max-width: 1000px;
+    margin: 30px auto; /* The auto is what makes the content centered */
+    margin-top: 10px;
+    padding: 20px;
+  }
+  
+  /* All buttons */
+  .buttons {
+    /* text-align: left; */
+    display: flex;
+    background-color: transparent;
+  }
+  
+  .buttons button{
+    /* margin: 15px; */
+    margin-bottom: 15px;
+    margin-top:15px;
+    margin-left: 0;
+
+    color: whitesmoke;
+    background-color: crimson;
+    border-color: transparent;
+
+    border-radius: 6px;
+  }
+  
+  .buttons button:hover {
+    background-color: rgba(245, 245, 245, 0.653);
+    color: crimson;
+  }
+
+/* Reset Button */
+  .resetButton {
+    transform: scale(1.15);
+    margin-right: 15px;
+    margin-left: 10px;
+    background-color: transparent;
+  }
+
+
+  .resetButton:hover {
+    transform: scale(1);
+  }
+
+/* Alg Buttons */
+.algButtons {
+    background-color: transparent;
+}
+
+  .algButtons button {
+    margin-right: 10px;
+  }
+
+  .algButtons button:hover {
+    transform: scale(.9);
+  }

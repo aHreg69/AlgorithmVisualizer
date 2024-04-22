@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
-* {
-  margin: 0;
-  font-family: "Fredoka";
-  font-weight: 300;
-  color: whitesmoke;
-  background-color: #22262b;
-}
+
 
 /* body {
   margin: 0;
@@ -22,46 +16,65 @@
     monospace;
 } */
 
-.array-bar {
-  width: 2px;
-  background-color: whitesmoke;
-  display: inline-block;
-  margin: 0 1px;
-  border-radius: 1px;
+body {
+  background-color: #22262b;
 }
 
-.arrContainer {
-  /*position: absolute;
-  right: 0px;*/
-
+* {
   margin: 0;
-  position: relative;
-  transform: rotate(180deg);
-  /* margin-top: 100px; */
-  border-bottom: 2px solid crimson;
-  border-radius: 1px;
-  
-}
-
-.content {
-  max-width: 800px;
-  margin: 30px auto; /* The auto is what makes the content centered */
-  padding: 20px;
-}
-
-.alg-buttons button{
-  margin: 15px;
-  margin-right: 10px;
-  margin-left: 0;
+  font-family: "Fredoka";
+  font-weight: 300;
   color: whitesmoke;
-  background-color: crimson;
-  border-color: transparent;
-  border-radius: 6px;
-
+  /* background-color: #22262b; */
 }
 
-.alg-buttons button:hover {
-  background-color: whitesmoke;
-  color: crimson;
-  transform: scale(.9);
+.navbar {
+  padding: 15px;
+  display: flex;
+  align-items:baseline;
+  width:900px;
+  margin: 0 auto;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.navbar h1 {
+  color:crimson;
+  font-weight: 300;
+}
+
+.navbar .link {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 6px;
+}
+
+.navbar a:hover {
+  color:crimson;
+}
+
+.welcome {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+
+  padding: 15px;
+  border-radius: 12px;
+
+  border-bottom: 2px solid rgba(245, 245, 245, 0.653);
+
+  background-image: linear-gradient(to top, transparent, #41464c9b);
+}
+
+.welcome h1 {
+  background-color: transparent;
+}
+
+.welcome p {
+  background-color: transparent;
 }

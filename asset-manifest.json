@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/AlgorithmVisualizer/static/css/main.3ac72741.css",
+    "main.js": "/AlgorithmVisualizer/static/js/main.05294da5.js",
+    "static/media/quickSortBigO.png": "/AlgorithmVisualizer/static/media/quickSortBigO.54d9d649831a1bb4c207.png",
+    "static/media/bubbleSortBigO.png": "/AlgorithmVisualizer/static/media/bubbleSortBigO.f4d87fdbe74fcaaff3cd.png",
+    "static/media/bubbleSortVis.png": "/AlgorithmVisualizer/static/media/bubbleSortVis.e9dbde46f4274beb002c.png",
+    "static/media/quickSortPic.png": "/AlgorithmVisualizer/static/media/quickSortPic.cc5dc728d46dea2c13d0.png",
+    "index.html": "/AlgorithmVisualizer/index.html",
+    "main.3ac72741.css.map": "/AlgorithmVisualizer/static/css/main.3ac72741.css.map",
+    "main.05294da5.js.map": "/AlgorithmVisualizer/static/js/main.05294da5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ac72741.css",
+    "static/js/main.05294da5.js"
+  ]
+}

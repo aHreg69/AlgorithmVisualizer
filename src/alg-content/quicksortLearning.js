@@ -5,21 +5,12 @@ import quickPic from '../images/quickSortPic.png';
 
 let titleCard = 'Quick Sort';
 let description = 'Chooses an index in the array as a pivot. Values that are smaller than the pivot are moved to the left of the pivot, values that are larger than the pivot move to the right of the pivot.';
-
-// export function setInfo (alg) {
-//     if (alg === 1) {
-//         titleCard = 'Bubble Sort';
-//         description = 'This is the description for the Bubble Sort algorithm';
-//     } else if (alg === 2) {
-//         titleCard = 'Quick Sort';
-//         description = 'This is the description for the Quick Sort algorithm';
-//     }
-// }
-
+let bigODescription = 'The Quick Sort is all in the name. Despite having a worst case O(n) of O(n^2), the best (and average) case is O(n log(n)). The Worst case scenario is if the pivots were to either be the smallest or largest values, which leads to more recursive calls.';
 
 
 const QuickSortLearning = () => {
 
+    // declares a collapsible object
     const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
 
     return (
@@ -42,7 +33,7 @@ const QuickSortLearning = () => {
                         </p>
                         <br/>
                         <p>
-                            The Quick Sort is all in the name. Despite having a worst case O(n) of O(n^2), the best case is O(n log(n)). The Worst case scenario is if the pivots were to either be the smallest or largest values, which leads to more recursive calls.
+                            {bigODescription}
                         </p>
                     </div>
                 </div>

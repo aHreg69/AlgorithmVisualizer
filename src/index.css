@@ -17,7 +17,7 @@
 } */
 
 body {
-  background-color: #22262b;
+  background-color: #22262b; 
 }
 
 * {
@@ -25,7 +25,6 @@ body {
   font-family: "Fredoka";
   font-weight: 300;
   color: whitesmoke;
-  /* background-color: #22262b; */
 }
 
 .navbar {
@@ -78,3 +77,38 @@ body {
 .welcome p {
   background-color: transparent;
 }
+
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  text-align: left;
+
+  padding: 15px;
+  border-radius: 12px;
+
+  border-bottom: 2px solid rgba(245, 245, 245, 0.653);
+
+  background-image: linear-gradient(to top, transparent, #41464c9b);
+}
+
+.source-links {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  text-align: left;
+
+  padding: 15px;
+  border-radius: 12px;
+
+  border-bottom: 2px solid rgba(245, 245, 245, 0.653);
+
+  background-image: linear-gradient(to top, transparent, #41464c9b);
+}
+
+.source-links h2 {
+  margin-bottom: 15px;
+}
+

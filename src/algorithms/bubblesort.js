@@ -1,3 +1,4 @@
+// resposible for storing the swaps of the array to use for the animations
 export function getBubbleSortAnimations(array) {
     let animations = [];
     let helperArray = array.slice();
@@ -5,6 +6,7 @@ export function getBubbleSortAnimations(array) {
     return animations;
 }
   
+// bubble sort
 function bubbleSort(helperArray, animations) {
 
     const length = helperArray.length;
@@ -30,6 +32,7 @@ function bubbleSort(helperArray, animations) {
 
 }
   
+// function to swap values
 function swap(helperArray, firstIndex, secondIndex) {
     let temp = helperArray[firstIndex];
     helperArray[firstIndex] = helperArray[secondIndex];

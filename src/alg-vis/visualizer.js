@@ -5,18 +5,15 @@ import React from 'react';
 import {getBubbleSortAnimations} from '../algorithms/bubblesort';
 import {getQuickSortAnimations} from '../algorithms/quicksort';
 
-//setting info
-// import {setInfo} from '../alg-content/quicksortLearning';
-
 //variables
 let animSpeed = 1;
 let arraySize = 200;
 
 
-
-
 export default class ArrayContainer extends React.Component {
 
+
+    // sets the state
     constructor(props){
         super(props);
 
@@ -33,6 +30,8 @@ export default class ArrayContainer extends React.Component {
         this.initArray();
     }
 
+
+    //initializes the array
     initArray() {
         const visArray = []
         for (let i = 0; i < arraySize; i++) {
@@ -41,6 +40,7 @@ export default class ArrayContainer extends React.Component {
         this.setState({visArray});
     }
 
+    //displays the array
     render() {
          
         const {visArray} = this.state;
@@ -73,9 +73,8 @@ export default class ArrayContainer extends React.Component {
         
     }
 
+    // responsible for performing the animations for bubble sort
     bubbleSort() {
-        // setInfo(1);
-        // Handles displaying bubble sort animations
         const animations = getBubbleSortAnimations(this.state.visArray);
         for (let i = 0; i < animations.length; i++) {
           const isColorChange =
@@ -107,8 +106,8 @@ export default class ArrayContainer extends React.Component {
         }
       }
 
+      // responsible for performing the animations for quick sort
       quickSort() {
-        // setInfo(2);
         // Handles displaying quick sort animations
         const animations = getQuickSortAnimations(this.state.visArray);
         for (let i = 0; i < animations.length; i++) {
@@ -145,6 +144,7 @@ export default class ArrayContainer extends React.Component {
 
 }
 
+// function to get a random integer from an interval
 export function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }

@@ -11,6 +11,8 @@
 .learning-section h1{
     text-align: left;
     margin: 15px;
+    margin-left: 0px;
+    margin-top: 0px;
 }
 
 .alg-learning {
@@ -39,7 +41,7 @@
 
 .collapsible .header:hover {
     transform: scale(.9);
-    background-color: rgba(245, 245, 245, 0.653);
+    background-color: rgba(245, 245, 245, 0.653); 
     color: crimson;
 }
 
@@ -48,7 +50,6 @@
     margin: 15px;
     margin-left: 0px;
     background-color: transparent;
-    /* border-top: 2px solid whitesmoke; */
 }
 
 .collapsible .learning h1 {
@@ -79,7 +80,6 @@
 
 .images {
     height: 250px;
-    /* width: 250px; */
     display:flex;
 }
 

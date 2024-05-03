@@ -1,5 +1,6 @@
 import {randomIntFromInterval} from '../alg-vis/visualizer';
 
+// resposible for getting the swaps to use for the animations
 export function getQuickSortAnimations(array) {
     let animations = [];
     let helperArray = array.slice();
@@ -8,6 +9,7 @@ export function getQuickSortAnimations(array) {
     return animations;
   }
   
+  // recursive quick sort function
   function doQuickSort(helperArray, startIdx, endIdx, animations) {
     let pivotIdx;
     if (startIdx === endIdx) return;
@@ -18,14 +20,16 @@ export function getQuickSortAnimations(array) {
     }
   }
   
+  // function that selects the pivot
   function partitionArray(helperArray, startIdx, endIdx, animations) {
-    let pivotIdx = randomIntFromInterval(startIdx, endIdx); // get a random index in array for pivot
+    // get a random index in array for pivot
+    let pivotIdx = randomIntFromInterval(startIdx, endIdx); 
   
     animations.push(["comparison1", pivotIdx, endIdx]);
     animations.push(["swap", pivotIdx, helperArray[endIdx]]);
     animations.push(["swap", endIdx, helperArray[pivotIdx]]);
     animations.push(["comparison2", pivotIdx, endIdx]);
-    swapEleInArray(helperArray, pivotIdx, endIdx);
+    swap(helperArray, pivotIdx, endIdx);
   
     let lti = startIdx;
   
@@ -37,7 +41,7 @@ export function getQuickSortAnimations(array) {
         animations.push(["swap", i, helperArray[lti]]);
         animations.push(["swap", lti, helperArray[i]]);
         animations.push(["comparison2", i, lti]);
-        swapEleInArray(helperArray, i, lti);
+        swap(helperArray, i, lti);
         lti++;
       }
     }
@@ -46,11 +50,11 @@ export function getQuickSortAnimations(array) {
     animations.push(["swap", lti, helperArray[endIdx]]);
     animations.push(["comparison2", lti, endIdx]);
   
-    swapEleInArray(helperArray, lti, endIdx);
+    swap(helperArray, lti, endIdx);
     return lti;
   }
   
-  function swapEleInArray(helperArray, firstIdx, secondIdx) {
+  function swap(helperArray, firstIdx, secondIdx) {
     let temp = helperArray[firstIdx];
     helperArray[firstIdx] = helperArray[secondIdx];
     helperArray[secondIdx] = temp;

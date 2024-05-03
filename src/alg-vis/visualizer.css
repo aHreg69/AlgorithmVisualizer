@@ -5,7 +5,7 @@
     padding-top: 0px;
     border-radius: 12px;
     background-image: linear-gradient(to top, transparent, #41464c9b);
-    border-bottom: 2px solid rgba(245, 245, 245, 0.653);
+    border-bottom: 2px solid rgba(245, 245, 245, 0.653); 
     margin: auto;
   }
   
@@ -19,15 +19,13 @@
   }
   
   .arrContainer {
-    /*position: absolute;
-    right: 0px;*/
-  
     margin: 0;
     position: relative;
     transform: rotate(180deg);
-    /* margin-top: 100px; */
+
     border-bottom: 2px solid crimson;
     border-radius: 1px;
+
     background-color: transparent;
     
   }
@@ -41,13 +39,11 @@
   
   /* All buttons */
   .buttons {
-    /* text-align: left; */
     display: flex;
     background-color: transparent;
   }
   
   .buttons button{
-    /* margin: 15px; */
     margin-bottom: 15px;
     margin-top:15px;
     margin-left: 0;

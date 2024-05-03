@@ -2,8 +2,9 @@
 import QuickSortLearning from "./quicksortLearning";
 import BubbleSortLearning from "./bubblesortLearning";
 
-const LearningSection = () => {
+export const LearningSection = () => {
 
+    // returns all the learning content
     return (
         <div className='learning-section'>
             <h1>
@@ -21,4 +22,3 @@ const LearningSection = () => {
 
 }
 
-export default LearningSection;

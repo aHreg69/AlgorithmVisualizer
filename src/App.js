@@ -1,26 +1,30 @@
+
 import './App.css';
 
-//Website content
-import NavBar from './header/navbar';
-import Welcome from './header/welcome';
-import ArrayContainer from './alg-vis/visualizer';
+import { BrowserRouter as Router, Routes, Switch, Route } from 'react-router-dom';
 
-//learning
-import LearningSection from './alg-content/learningcontent';
+import { NavBar } from './header/navbar';
+
+import {VisualizerPage} from './pages/visualizerPage';
+
+import {About} from './pages/about';
+
 
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="content">
-        <NavBar/>
-        <Welcome/>
-        <ArrayContainer/>
-        <LearningSection/>
-        
-      </header>
+    <div>
+      <NavBar/>
+      <Router>
+        <Routes>
+          <Route path="/about"  element={<About/>}/>
+          <Route path="/" element={<VisualizerPage/>}/>
+        </Routes>
+      </Router>
     </div>
+    
+        
   );
 }
 
